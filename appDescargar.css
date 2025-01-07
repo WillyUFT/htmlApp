@@ -1,0 +1,170 @@
+.banner {
+  background: url("https://via.placeholder.com/1920x400") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.qr-section img {
+  max-width: 150px;
+}
+
+.header {
+  text-align: center;
+  position: fixed !important;
+  z-index: 50;
+  width: 100%;
+  height: 105px;
+  transition: 0.2s ease;
+  background-color: #0099bb;
+}
+
+.titulo-seccion-contenedor {
+  width: 100%;
+  height: 105px;
+  background-color: #f23314;
+  align-items: center;
+  color: white;
+  display: flex;
+}
+
+.cartas {
+  width: 100%;
+  height: 390px;
+  border-radius: 0% !important;
+}
+
+.imagen-cartas {
+  width: 70%;
+  padding-bottom: 2px;
+}
+
+.titulo-seccion-texto {
+  padding: 10px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: "5avenida";
+  align-self: center;
+  font-weight: bold;
+  margin-bottom: 0%;
+}
+
+.content-section {
+  margin-top: 100px;
+}
+
+.logo-uft {
+  max-width: 250px;
+}
+
+.titulo-seccion-animacion {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.titulo-seccion-animacion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-descargar-col {
+  position: relative;
+  z-index: 20;
+  margin-top: -100px;
+}
+
+.img-container {
+  position: relative;
+}
+
+.footer {
+  align-items: center;
+  color: white;
+  display: flex;
+}
+
+.roboto {
+  font-family: "Roboto";
+}
+
+/* ============================== FUENTES ============================== */
+@font-face {
+  font-family: "5avenida";
+  src: url("fuentes/5thAvenue.ttf") format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.roboto-thin {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", serif;
+  font-weight: 900;
+  font-style: italic;
+}
