@@ -35,7 +35,14 @@
 
     <!-- ~~~~~~~~~~~~~~~ Imagen Para Que Descarguen La Wea ~~~~~~~~~~~~~~~~ -->
     <div class="img-container">
-        <img src="header-pc.png" style="width: 100%;" alt="descarga-app">
+        <div class="row">
+            <div class="d-none d-md-block">
+                <img src="header-pc.png" style="width: 100%;" alt="descarga-app-pc">
+            </div>
+            <div class="d-md-none">
+                <img src="header-cel.png" style="width: 100%;" alt="descarga-app-cel">
+            </div>
+        </div>
     </div>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~ Sección De Beneficios ~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -48,7 +55,7 @@
 
             <!-- * Horario -->
             <div class="col-lg-3 col-md-6 col-xs-12 mb-5">
-                <div class="card cartas" style="width: 100%;">
+                <div class="card cartas cartas-animacion" style="width: 100%;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -65,7 +72,7 @@
 
             <!-- * Ingreso a la universidad -->
             <div class="col-lg-3 col-md-6 col-xs-12 mb-5">
-                <div class="card cartas" style="width: 100%;">
+                <div class="card cartas cartas-animacion" style="width: 100%;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -83,7 +90,7 @@
 
             <!-- * Gestión sencilla -->
             <div class="col-lg-3 col-md-6 col-xs-12 mb-5">
-                <div class="card cartas" style="width: 100%;">
+                <div class="card cartas cartas-animacion" style="width: 100%;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -100,7 +107,7 @@
 
             <!-- * Pago de cuotas -->
             <div class="col-lg-3 col-md-6 col-xs-12 mb-5">
-                <div class="card cartas">
+                <div class="card cartas cartas-animacion">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -123,39 +130,64 @@
     </div>
 
     <section class="container mt-4">
-        <div class="row text-center justify-content-center" style="text-align: center;">
+        <div class="row text-center justify-content-center">
 
-            <div class="col-12 mb-3">
-                <h5>
-                    Escanea el código QR o presiona en la imagen para descargar miFinis.
-                </h5>
+            <div class="col-12 mb-3" style="width: 80%; align-items: center;">
+                <div class="card" style="height: fit-content; min-height: 50px;">
+                    <div class="card-body">
+                        <h3 style=" margin-bottom: 0; align-self: center;">
+                            <strong>Escanea el código QR o presiona en la imagen para descargar miFinis.</strong>
+                        </h3>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class=" row text-center justify-content-center" style="text-align: center;">
 
             <!-- * Android -->
             <div class="col-lg-4 col-md-6 col-xs-12 mb-5">
-                <img src="descargar-android-carrusel-cel.png" style="width: 100%;" alt="Descargar Android">
+                <a href="https://youtu.be/0XTiNB36D7M?si=_3aCQRRsxinLmErd" target="_blank">
+                    <img src="descargar-android-carrusel-cel.png" class="img-descargas-animacion" style="width: 100%;"
+                        alt="Descargar Android">
+                </a>
             </div>
 
             <!-- * Ios -->
             <div class="col-lg-4 col-md-6 col-xs-12 mb-5">
-                <img class="imagen-cartas" src="descargar-apple-carrusel-cel.png" style="width: 100%;"
-                    alt="Descargar Apple">
+                <a href="https://youtu.be/J3VAB9YAXmw?si=8GFZW6kCUWEswBpW" target="_blank">
+                    <img class="img-descargas-animacion" src="descargar-apple-carrusel-cel.png" style="width: 100%;"
+                        alt="Descargar Apple">
+                </a>
             </div>
-
         </div>
 
     </section>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <footer class="text-center mt-5 py-3 footer">
-        <p>¿Dudas? Contáctanos en <a href="ayudamatricula2025@uft.cl">ayudamatricula2025@uft.cl</a></p>
+        <div class="row" style="width: 100%;">
+            <div class="col-6" style="text-align: left; padding-left: 5%;">
+                <h5>
+                    Ante cualquier duda con tu matrícula, por favor, contáctanos a <a class="text-white"
+                        href="mailto:ayudamatricula2025@uft.cl">ayudamatricula2025@uft.cl</a>
+                </h5>
+                <h5>
+                    Si tienes problemas técnicos, puedes enviar un ticket <a class="text-white"
+                        href="https://music.youtube.com/watch?v=mDATU5_jeC0&si=648VPtG6KKhDY7RB">aquí</a>
+                </h5>
+            </div>
+            <div class="col-6">
+                <img src="header.png" alt="logo-uft-footer" width="150px">
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // El script para las animaciones
+        // * Script para las animaciones de los títulos
         document.addEventListener('DOMContentLoaded', function () {
             const titles = document.querySelectorAll('.titulo-seccion-animacion');
 
@@ -171,6 +203,41 @@
                 observer.observe(title);
             });
         });
+
+        // * Script para las animaciones de las cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const titles = document.querySelectorAll('.cartas-animacion');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            titles.forEach(title => {
+                observer.observe(title);
+            });
+        });
+
+        // * Script para las animaciones de las imágenes de descargas
+        document.addEventListener('DOMContentLoaded', function () {
+            const titles = document.querySelectorAll('.img-descargas-animacion');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            titles.forEach(title => {
+                observer.observe(title);
+            });
+        });
+
     </script>
 </body>
 
