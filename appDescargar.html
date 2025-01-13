@@ -130,8 +130,9 @@
     </div>
 
     <section class="container mt-4">
-        <div class="row text-center justify-content-center">
 
+        <!-- * Título de presionar boton y wea -->
+        <div class="row text-center justify-content-center">
             <div class="col-12 mb-3" style="width: 80%; align-items: center;">
                 <div class="card" style="height: fit-content; min-height: 50px;">
                     <div class="card-body">
@@ -143,11 +144,12 @@
             </div>
         </div>
 
-        <div class=" row text-center justify-content-center" style="text-align: center;">
+        <!-- * Botones de descarga -->
+        <div class="row text-center justify-content-center" style="text-align: center;">
 
             <!-- * Android -->
             <div class="col-lg-4 col-md-6 col-xs-12 mb-5 img-descargas-animacion">
-                <a href="https://youtu.be/0XTiNB36D7M?si=_3aCQRRsxinLmErd" target="_blank">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#instruccionesModal">
                     <img src="img/descargas/android/descargar-android-carrusel-cel.png" class="img-descarga"
                         alt="Descargar Android">
                 </a>
@@ -155,7 +157,7 @@
 
             <!-- * Ios -->
             <div class="col-lg-4 col-md-6 col-xs-12 mb-5 img-descargas-animacion">
-                <a href="https://youtu.be/J3VAB9YAXmw?si=8GFZW6kCUWEswBpW" target="_blank">
+                <a href="https://apps.apple.com/app/id6446154263" target="_blank">
                     <img class="img-descarga" src="img/descargas/apple/descargar-apple-carrusel-cel.png"
                         alt="Descargar Apple">
                 </a>
@@ -182,11 +184,17 @@
             </div>
             <div class="col-1">
                 <div class="invisible-click">
-                    <a href="https://youtu.be/RsZ4wADNjoE?si=j7qaTYvEc7kYxbY5"></a>
+                    <a href="https://youtu.be/RsZ4wADNjoE?si=j7qaTYvEc7kYxbY5">
+
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- ! ------------------------------------------------------------------ -->
+    <!-- !                              SCRIPTS                               -->
+    <!-- ! ------------------------------------------------------------------ -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -245,6 +253,129 @@
         });
 
     </script>
+
+    <!-- ! ------------------------------------------------------------------ -->
+    <!-- !                               MODALS                               -->
+    <!-- ! ------------------------------------------------------------------ -->
+
+    <!-- & ---------------- MODAL PARA DESCARGAR EN ANDROID ----------------- -->
+    <div class="modal fade" id="instruccionesModal" tabindex="-1" aria-labelledby="instruccionesModalLabel"
+        aria-hidden="true">
+
+        <!-- * Iniciamos el modal al centro de la pantalla -->
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- * Header -->
+                <div class="modal-header">
+                    <!-- * Título -->
+                    <h5 class="modal-title" id="instruccionesModalLabel">Instalación en Android</h5>
+                    <!-- * Botón de cerrar -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <!-- * Body -->
+                <div class="modal-body">
+
+                    <!-- ^ Comenzamos el carrusel -->
+                    <div id="carouselExampleIndicators" class="carousel slide">
+
+                        <!-- ^ Indicadores (Las weaitas que nos dicen que paso estamos) -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+
+                        <!-- ^ Contenido del carrusel (Las instrucciones) -->
+                        <div class="carousel-inner">
+                            <!-- ~ Paso 1 -->
+                            <div class="carousel-item active">
+                                <!-- & Imagen PC -->
+                                <div class="d-none d-md-block">
+                                    <img src="img/modal-instrucciones-android/paso1.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <!-- & Imagen cel -->
+                                <div class="d-md-none">
+                                    <img src="img/modal-instrucciones-android/paso1-cel.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <!-- ~ Paso 2 -->
+                            <div class="carousel-item">
+                                <!-- & Imagen PC -->
+                                <div class="d-none d-md-block">
+                                    <img src="img/modal-instrucciones-android/paso2.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <!-- & Imagen cel -->
+                                <div class="d-md-none">
+                                    <img src="img/modal-instrucciones-android/paso2-cel.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <!-- ~ Paso 3 -->
+                            <div class="carousel-item">
+                                <!-- & Imagen PC -->
+                                <div class="d-none d-md-block">
+                                    <img src="img/modal-instrucciones-android/paso3.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                                <!-- & Imagen cel -->
+                                <div class="d-md-none">
+                                    <img src="img/modal-instrucciones-android/paso3-cel.png" class="d-block w-100"
+                                        alt="...">
+                                </div>
+                            </div>
+                            <!-- ~ Paso 4 -->
+                            <div class="carousel-item">
+                                <!-- & Imagen PC -->
+                                <div class="d-none d-md-block">
+                                    <a href="/apk/miFinis.apk" download>
+                                        <img src="img/modal-instrucciones-android/paso4.png" class="d-block w-100"
+                                            alt="...">
+                                    </a>
+                                </div>
+                                <!-- & Imagen cel -->
+                                <div class="d-md-none">
+                                    <a href="/apk/miFinis.apk" download>
+                                        <img src="img/modal-instrucciones-android/paso4-cel.png " class="d-block w-100"
+                                            alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ^ Botones para controlar el coso -->
+                        <!-- * Atrás -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <!-- * Adelante -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
