@@ -140,7 +140,7 @@
 
 /* ------------------------------- FONDOS ------------------------------ */
 body {
-  background-image: url("img/fondos/fondo-cel.png");
+  background-image: url("/assets/img/fondos/fondo-cel.png");
   background-position: center;
   background-repeat: repeat;
 }
@@ -148,18 +148,18 @@ body {
 /* Media Queries para cambiar el fondo según el dispositivo */
 @media (min-width: 768px) {
   body {
-    background-image: url("img/fondos/fondo-tablet.png");
+    background-image: url("/assets/img/fondos/fondo-tablet.png");
   }
 }
 
 @media (min-width: 1300px) {
   body {
-    background-image: url("img/fondos/fondo-pc.png");
+    background-image: url("/assets/img/fondos/fondo-pc.png");
   }
 }
 
 @media (min-width: 2000px) {
   body {
-    background-image: url("img/fondos/fondo-4k.png");
+    background-image: url("/assets/img/fondos/fondo-4k.png");
   }
 }
